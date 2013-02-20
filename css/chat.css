@@ -1,0 +1,590 @@
+/*chat css*/
+.text-overflow { 
+	margin-left: 10px;
+	display:block;/*ÄÚÁª¶ÔÏóÐè¼Ó*/ 
+	word-break:keep-all;/* ²»»»ÐÐ */ 
+	white-space:nowrap;/* ²»»»ÐÐ */ 
+	overflow:hidden;/* ÄÚÈÝ³¬³ö¿í¶ÈÊ±Òþ²Ø³¬³ö²¿·ÖµÄÄÚÈÝ */ 
+	text-overflow:ellipsis;/* µ±¶ÔÏóÄÚÎÄ±¾Òç³öÊ±ÏÔÊ¾Ê¡ÂÔ±ê¼Ç(...) £»ÐèÓëoverflow:hidden;Ò»ÆðÊ¹ÓÃ¡£IE, Safari (WebKit)IE, Safari (WebKit)*/ 
+	-o-text-overflow:ellipsis; /* ¼æÈÝOpera */
+}
+
+.peerEditor {
+	overflow-x:hidden;
+	overflow-y:auto;
+	height: 369px;
+	width: 100%;
+	border:0px #ff0000 solid;
+	background-color: #fff;
+	word-break : break-all;
+}
+.selfEditor {
+	height: 77px;
+	width: 100%;
+	border: 0px #AAA solid;
+	padding:0px;
+	margin:0px;
+}
+
+.sendPanel {
+    background: none repeat scroll 0 0 #BCD5F0;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-top: 0px solid #CDE5F1;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+    position: absolute;
+    width: 100%;
+}
+.sendPanel .dijitButton {
+	margin-right: 13px;
+	float: right;
+	height: 24px;
+    overflow: hidden;
+    text-align: center;
+}
+.sendPanel .dijitComboButton {
+	margin-right: 20px;
+	float: right;
+	height: 23px;
+    overflow: hidden;
+    text-align: center;
+}
+
+#chatTab {
+	background-color: #BCD5F0;
+	overflow:hidden;
+}
+
+textarea{ resize: none;}
+
+.chatTab .dijitTabPaneWrapper, .chatTab .dijitTabContainerTop-tabs, .chatTab .dijitTabContainerBottom-tabs, .chatTab .dijitTabContainerLeft-tabs, .chatTab .dijitTabContainerRight-tabs {
+    border-color: none;
+}
+
+.chatTab .dijitContentPane {
+  padding: 0px;
+}
+.chatTab .dijitTabContainerTop-dijitContentPane,
+.chatTab .dijitTabContainerLeft-dijitContentPane,
+.chatTab .dijitTabContainerBottom-dijitContentPane,
+.chatTab .dijitTabContainerRight-dijitContentPane,
+.chatTab .dijitAccordionContainer-dijitContentPane {
+  background-color: #BCD5F0;
+  padding: 0px;
+}
+.chatTab .dijitSplitContainer-dijitContentPane, .chatTab .dijitBorderContainer-dijitContentPane {
+  padding: 0px;
+}
+
+.chatTab .dijitTabContainerTop-tabs .dijitTab {
+  margin-right: 4px;
+  padding: 4px 4px;
+  border-bottom-width: 0;
+  min-width: 60px;
+  text-align: center;
+  background-repeat: repeat-x;
+  background-image: -moz-linear-gradient(top, #ffffff 0px, #ffffff 1px, rgba(255, 255, 255, 0.1) 2px, rgba(255, 255, 255, 0.6) 7px, rgba(255, 255, 255, 0) 100%);
+  background-image: -webkit-linear-gradient(top, #ffffff 0px, #ffffff 1px, rgba(255, 255, 255, 0.1) 2px, rgba(255, 255, 255, 0.6) 7px, rgba(255, 255, 255, 0) 100%);
+  background-image: -o-linear-gradient(top, #ffffff 0px, #ffffff 1px, rgba(255, 255, 255, 0.1) 2px, rgba(255, 255, 255, 0.6) 7px, rgba(255, 255, 255, 0) 100%);
+  background-image: -ms-linear-gradient(top, #ffffff 0px, #ffffff 1px, rgba(255, 255, 255, 0.1) 2px, rgba(255, 255, 255, 0.6) 7px, rgba(255, 255, 255, 0) 100%);
+  -webkit-box-shadow: 0 -1px 1px rgba(0, 0, 0, 0.04);
+  -moz-box-shadow: 0 -1px 1px rgba(0, 0, 0, 0.04);
+  box-shadow: 0 -1px 1px rgba(0, 0, 0, 0.04);
+}
+.chatTab .dijitTabContainerTop-tabs .dijitTabChecked {
+  background-image:none;
+  background-image: -moz-linear-gradient(top, #ffffff 0px, #ffffff 1px, rgba(255, 255, 255, 0) 2px, #ffffff 7px);
+  background-image: -webkit-linear-gradient(top, #ffffff 0px, #ffffff 1px, rgba(255, 255, 255, 0) 2px, #ffffff 7px);
+  background-image: -o-linear-gradient(top, #ffffff 0px, #ffffff 1px, rgba(255, 255, 255, 0) 2px, #ffffff 7px);
+  background-image: -ms-linear-gradient(top, #ffffff 0px, #ffffff 1px, rgba(255, 255, 255, 0) 2px, #ffffff 7px);
+  -moz-box-shadow: 0 -1px 2px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 -1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.chatTab .dijitTabChecked {
+	border-color: transparent;
+	background-color: #99AFE8;
+	color: black;
+}
+.chatTab .dijitTab {
+  border: 0px solid #B5BCC7;
+  -webkit-transition-property: background-color, border;
+  -moz-transition-property: background-color, border;
+  transition-property: background-color, border;
+  -webkit-transition-duration: 0.35s;
+  -moz-transition-duration: 0.35s;
+  transition-duration: 0.35s;
+  color: #494949;
+}
+.chatTab .dijitTabContainerTop-tabs .dijitTab {
+  -moz-border-radius: 5px 5px 5px 5px;
+  border-radius: 5px 5px 5px 5px;
+}
+.soria .dijitTabContainerTop-spacer {
+	height: 0px;
+	border: 0px solid #99AFC4;
+	background: transparent;
+}
+.dijitTabContainerTop-tabs {
+	border-bottom: 0px solid black;
+}
+.soria .dijitTabHover{
+	background-color:#89ABD6;
+}
+#im .dojoxDock {
+	border:0px solid black;
+}
+#im .dijitTabHover .dijitTabCloseButton,
+#im .dijitTabCloseButtonHover,
+#im .dijitTabCloseButtonActive,
+#im .dijitTabChecked .dijitTabCloseButton {
+	display: inline-block;
+}
+
+.dojoxDockNodeActive{
+	background-color:#FDEAA6;
+	border: 1px solid #ADADAD;
+    	border-radius: 2px 2px 2px 2px;
+    	cursor: pointer;
+    	float: left;
+    	height: 16px;
+    	list-style: none outside none;
+    	margin: 0;
+    	padding: 2px;
+    	width: auto;	
+}
+
+#dijitEditorBody {
+	word-break: break-all; 
+	overflow-x: hidden;
+}
+
+.chatArea {
+
+    clear: both;
+
+    display: inline-block;
+
+    width: 100%;
+	
+	padding: 3px;
+}
+
+.chatAvatar {
+
+    border: 1px solid #EEEEEE;
+
+    border-radius: 4px 4px 4px 4px;
+
+    float: left;
+
+    height: 32px;
+
+    padding: 1px;
+
+    width: 32px;
+
+}
+
+.chatNick {
+
+    color: #008000;
+
+    font-size: 12px;
+
+    margin-left: 40px;
+
+}
+
+.chatMsg {
+    
+    color: black;
+	
+    font-size: 12px;
+
+    margin-left: 40px;
+	
+	margin-top: 5px;
+
+    table-layout: fixed;
+
+    word-break: break-all;
+
+    word-wrap: break-word;
+
+}
+
+.tipIcon {
+    margin-left: 5px;
+    margin-top: 2px;    
+	float: left;
+}
+
+.tipbar {
+    border: none;
+    height: 20px;    
+    width: 100%;
+    background-color:#F5F5B5;
+	position: relative;
+}
+
+.tipbar_hide {
+	height: 0px;
+}
+
+.tipText {
+    float: left;
+    margin-left: 6px;
+    margin-top: 1px;
+    color: black;
+	overflow: hidden;
+	width: 80%;
+	display: inline-block;
+	height: 18px;
+	text-overflow: ellipsis;
+}
+
+.tipBtnClose {		
+    float: right;
+    border: 0px;
+    margin-top: 2px;
+    margin-right: 8px;
+    width: 16px;
+    height: 16px;
+    background: url("../img/skin/close.png") no-repeat scroll 0px 0px transparent;
+}
+
+.tipBtnCancel {
+   float: right;
+   border: 0px;
+   margin-top: 0px;
+   margin-right: 8px;
+   height: 20px;
+}
+
+.tipBtnAccept {
+   float: right;
+   border: 0px;
+   margin-top: 0px;
+   margin-right: 5px;
+   height: 20px;
+}
+
+.soria .customIcon {
+/*	background-image: url('../img/skin/tool/shake.png');/* custom editor icons sprite image */
+	background-repeat: no-repeat;
+	width: 18px;
+	height: 18px;
+	text-align: center;
+}
+
+.customIconShake {
+	background-image: url('../img/skin/tool/shake.png');
+	background-position: 0px;
+}
+
+.customIconFace {
+	background-image: url('../img/skin/tool/face.png');
+	background-position: 0px;
+}
+
+.customIconHistory {
+	background-image: url('../img/skin/tool/history.png');
+	background-position: 0px;	
+
+}
+
+.btnIconCheck {
+	background-image: url("../img/skin/CheckBox.png"); 
+	background-repeat: no-repeat;
+	background-positon: 0px;
+	width: 16px;
+	height: 16px;
+}
+
+
+.emotionFrame .dijitTooltipContainer {
+	background-color: #FFFFFF;
+	border-bottom:medium none;
+    border-left:medium none;
+    border-right:medium none;
+    border-top:medium none;
+	padding:0em;
+	width:24px;
+    height:24px;
+}
+.emotionFrame .dijitTooltipDialog {
+ background-image: url("../img/skin/face.png") no-repeat scroll left top transparent;
+ height:199px;
+ width:421px;
+}
+.emotionFrame  .p_class{
+margin-top:-5px;
+}
+
+
+.soria .emotionFrame .dijitTooltipConnector {  
+    bottom: 0;
+	   height: 0px;
+    left: 6px;
+    width: 17px;
+}
+
+
+.emotionFrame .dijitTooltipFocusNode {
+    padding: 0px;
+}
+.emotionFrame .image_div{
+width:24px;
+height:24px;
+position:relative;
+background:white;
+}
+
+.emotionFrame .smile{
+width:441px;
+height:175px;
+position:relative;
+background:white;
+}
+
+.trade_Panel {
+	background-color: white;
+	position: relative;
+	overflow: auto;
+	width:100%;
+	height:100%;
+}
+
+.trade_Panel .gridContainerTable {
+	border:none;
+}
+
+.trade_Panel .gridContainerZone > *{
+	margin: 3px !important;
+}
+
+.trade_Title {
+	
+}
+
+.trade_Bottom {
+    
+}
+
+.trade_Item {
+	border: 1px solid #c2d5e3;
+	text-align:left;
+	margin-bottom: 3px;
+}
+
+.trade_name{
+	margin:0px; 
+	padding:0px;
+	color: #005EAC;
+}
+.trade_price,
+.trade_time,
+.trade_id,
+.trade_status {
+	margin:0px; 
+	padding:0px;
+}
+.trade_state{
+	height: 21px;
+}
+.trade_status{
+	float: left;
+}
+.trade_btn{
+	margin-left:5px;
+	margin-top: 0px;
+	margin-bottom: 0px;
+	background-image: none;
+	padding: 0px;
+}
+
+.msgListItem {
+	float: left;
+	width: 100%;
+	position: relative;
+	z-index: 3;
+	margin-top: 16px;
+}
+.clearfix {
+zoom: 1;
+}
+
+.clearfix::after {
+content: ".";
+display: block;
+height: 0;
+font-size: 0;
+clear: both;
+visibility: hidden;
+}
+
+.msgAvatar {
+position: absolute;
+top: 0;
+left: 0;
+width: 50px;
+height: 50px;
+}
+
+.msgAvatar img {
+background: none repeat scroll 0 0 #fff;
+border-radius: 5px 5px 5px 5px;
+box-shadow: 0 2px 3px #ccc;
+display: block;
+height: 50px;
+width: 50px;
+}
+
+li {
+text-align: -webkit-match-parent;
+}
+
+ol, ul {
+list-style: none;
+}
+
+.msgContent {
+margin-left: 70px;
+position: relative;
+display: inline-block;
+}
+
+.msgContent div.container-top {
+
+}
+
+.msgContent div.container-bottom {
+
+}
+
+.msgContent div.triangle-send {
+	position: absolute;
+    top: 17px;
+    left: -18px;
+    height: 18px;
+    width:18px;
+    overflow:hidden;
+}
+
+.msgContent div.triangle-send:before{
+    background: #F5FAFF;
+    box-shadow: 0 0 6px #B2B2B2;
+    content: "";
+    display: block;
+    position: absolute;
+    top: 4px;
+    left: 12px;
+    height: 12px;
+    width:  12px;
+	-o-transform: rotate(40deg);
+    -moz-transform: rotate(40deg);
+	-webkit-transform: rotate(40deg);
+	transform: rotate(40deg);	
+	/*for ie*/
+	filter: progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=0.7660444431189777, M12=-0.6427876096865394, M21=0.6427876096865398, M22=0.7660444431189779);
+}
+
+.msgContent div.triangle-recv {
+	position: absolute;
+    top: 17px;
+    left: -18px;
+    height: 18px;
+    width:18px;
+    overflow:hidden;
+}
+
+.msgContent div.triangle-recv:before{
+    background: #FBFBEE;
+    box-shadow: 0 0 6px #B2B2B2;
+    content: "";
+    display: block;
+    position: absolute;
+    top: 4px;
+    left: 12px;
+    height: 12px;
+    width:  12px;
+	-o-transform: rotate(40deg);
+    -moz-transform: rotate(40deg);
+	-webkit-transform: rotate(40deg);
+	transform: rotate(40deg);	
+	/*for ie*/
+	filter: progid:DXImageTransform.Microsoft.Matrix(sizingMethod='auto expand', M11=0.7660444431189777, M12=-0.6427876096865394, M21=0.6427876096865398, M22=0.7660444431189779);
+}
+
+.msgContent div.container-center {
+-webkit-border-radius: 10px;
+-moz-border-radius: 10px;
+border-radius: 10px;
+-webkit-box-shadow: 0px 0px 6px #B2B2B2;
+-moz-box-shadow: 0px 0px 6px #B2B2B2;
+box-shadow: 0px 0px 6px #B2B2B2;
+/*for ie*/
+-ms-filter:"progid:DXImageTransform.Microsoft.Shadow(color=#dddddd,direction=0,strength=3) progid:DXImageTransform.Microsoft.Shadow(color=#dddddd,direction=90,strength=3) progid:DXImageTransform.Microsoft.Shadow(color=#dddddd,direction=180,strength=3) progid:DXImageTransform.Microsoft.Shadow(color=#dddddd,direction=270,strength=3)";
+*filter: 
+progid:DXImageTransform.Microsoft.Shadow(color=#dddddd,direction=0,strength=3)
+progid:DXImageTransform.Microsoft.Shadow(color=#dddddd,direction=90,strength=3)
+progid:DXImageTransform.Microsoft.Shadow(color=#dddddd,direction=180,strength=3)
+progid:DXImageTransform.Microsoft.Shadow(color=#dddddd,direction=270,strength=3);
+}
+
+.msgContent div.container-center div.title-box {
+padding: 0 23px 5px 21px;
+border-bottom: #ededed 1px solid;
+position: relative;
+}
+
+.msgContent div.container-center div.title-box span.msgTime {
+font-family: SimSun;
+color: #aeaeae;
+line-height: 22px;
+margin: 0 0 0 2px;
+}
+
+.msgContent div.container-center div.content-box {
+padding: 16px 25px 10px 25px;
+margin: 0 auto 0 auto;
+overflow: hidden;
+}
+
+.msgContent div.container-center div.content-box span.msgChat {
+text-align: left;
+word-break: break-all;	
+}
+
+.chatlist{
+	overflow:hidden;
+}
+
+.sendBgcolor {
+background: #e5f2fe;
+background: -webkit-gradient(linear, 0 0, 0 100%, from(#fff), to(#e5f2fe));
+background: -moz-linear-gradient(#fff, #e5f2fe);
+background: -o-linear-gradient(#fff, #e5f2fe);
+background: linear-gradient(#fff, #e5f2fe);
+/*for ie*/
+filter: 
+progid:DXImageTransform.Microsoft.Gradient(startColorStr='#ffffff',endColorStr='#e5f2fe',gradientType='0');
+}
+
+.recvBgcolor { 
+background: #F5F5D5;
+background: -webkit-gradient(linear, 0 0, 0 100%, from(#fff), to(#F5F5D5));
+background: -moz-linear-gradient(#fff, #F5F5D5);
+background: -o-linear-gradient(#fff, #F5F5D5);
+background: linear-gradient(#fff, #F5F5D5);
+/*for ie*/
+filter: 
+progid:DXImageTransform.Microsoft.Gradient(startColorStr='#ffffff',endColorStr='#F5F5D5',gradientType='0');
+}
+/* body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, button, textarea, p, blockquote, th, td {
+margin: 0;
+padding: 0;
+} */

@@ -1,0 +1,565 @@
+* {
+    outline: none !important;
+    /*-webkit-user-select:none;*/
+    /*-moz-user-select: none;*/
+}
+
+body {
+    margin: 0;
+    padding: 2em;
+    font-family: Lucida Sans,Lucida Grande,Arial !important;
+/*    font-size: 13px !important;*/
+    background: url('../img/skin/bg.jpg') repeat left top;
+    color: #333;
+  /*  -moz-user-select: none;*/
+}
+
+
+#loader {
+	padding:0;
+	margin:0;
+	position:absolute; 
+	top:0; left:0; 
+	width:100%; height:100%;  
+	background:#efefef;
+	opacity: 0.98; 
+	z-index:999;
+	vertical-align:middle;
+}
+#loaderInner {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 32px;
+	height: 32px;
+	margin-top: -16px;
+	margin-left: -16px;
+	background-image: url('../img/skin/loading.gif');
+	background-repeat: no-repeat;
+}
+
+button {
+	-webkit-transition: background-color 0.2s linear;
+	border-radius: 4px;
+	-moz-border-radius: 4px 4px 4px 4px;
+	-moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15);
+	background-color: #E4F2FF;
+	background-image: url("../img/skin/button.png");
+	background-position: center top;
+	background-repeat: repeat-x;
+	border: 1px solid #769DC0;
+	padding: 2px 8px 4px;
+	font-size:1em;
+}
+
+button:hover {
+	background-color: #AFD9FF;
+	color: #000000;
+}
+
+h1 {
+	font-size: 1.5em;
+}
+
+.break{
+	float: none;
+	clear: both;
+}
+
+#person{
+	margin-top: 5px;
+	margin-left: 5px;
+	border: 0px #000000 solid;
+}
+.nickname{
+	margin-left: 10px;
+	font-size: 15px;
+	vertical-align: middle;
+	line-height: 25px; 
+}
+.sign{
+	font-size: 14px;
+	vertical-align: middle;
+	line-height: 25px; 
+	margin-top: 2px;
+}
+.buddy{
+	width: 100%;
+	height: 48px;
+	padding-top: 4px;
+	padding-left: 5px;
+	margin-bottom:4px;
+	overflow: hidden;
+}
+.text-overflow { 
+	margin-left: 10px;
+	display: block;/*内联对象需加*/ 
+	word-break: keep-all;/* 不换行 */ 
+	white-space: nowrap;/* 不换行 */ 
+	overflow: hidden;/* 内容超出宽度时隐藏超出部分的内容 */ 
+	text-overflow: ellipsis;/* 当对象内文本溢出时显示省略标记(...) ；需与overflow:hidden;一起使用。IE, Safari (WebKit)IE, Safari (WebKit)*/ 
+	-o-text-overflow: ellipsis; /* 兼容Opera */
+}
+
+#tab {
+	width: 100%;
+	background-color: #fff;
+	overflow: auto;
+	margin-top: 3px;
+}
+#statusBtn {
+	margin-left: 5px; 
+	float: left;
+}
+#IMMain img {
+	float: left;
+}
+#login img {
+	float: none;
+}
+#login .dijitButtonNode {
+	width: 60px;
+	height: 18px;
+}
+label, span {
+    -moz-user-select: none;
+}
+.nickname label {
+	margin-left: 5px;
+}
+.sign label{
+	margin-left: 10px;
+}
+div #buddyList {
+	height: 100%; 
+	width: 100%;
+	overflow-x: hidden;
+	background-color: #fff;
+}
+/*
+.sendBtn {
+	border: 0px #ff0000 solid;
+	height: 25px;
+}
+.sendBtn .dijitButton {
+	margin-right: 20px;
+}
+.sendBtn .dijitComboButton {
+	margin-right: 20px;
+}
+*/
+
+.soria #statusBtn .dijitButtonNode {
+	border: 0px solid #8ba0bd;
+	border-bottom: 0px solid #657c9c;
+	padding: 0.1em 0.2em 0.2em 0.2em;
+	background: #D0E2F7 /*url("")*/  repeat-x top left;
+}
+
+.soria #statusBtn .dijitDropDownButtonHover .dijitButtonNode {
+	color: #243C5F;
+	background: #D0E2F7 url("//ajax.googleapis.com/ajax/libs/dojo/1.8.3/dijit/themes/soria/images/buttonHover.png") repeat-x top left;
+}
+ 
+textarea{ resize: none;}
+
+/*shaow*/
+h1 {
+	font: bold 32px/2 Verdana, Geneva, sans-serif;
+	color: #d0e2f9;
+	text-shadow: 1px 1px 2px rgba(0, 0, 0, .8), 0 0 0em rgba(255, 0, 255, 0.5), 0 0 0.2em rgba(0, 0, 255, 0.9);
+}
+.boxShadow {
+	border: 1px solid ddd;
+	-webkit-box-shadow: 0 0 5px rgba(0, 0, 0, .8), 0 0 10px rgba(208, 226, 247, .5);
+	-moz-box-shadow: 0 0 5px rgba(0, 0, 0, .8), 0 0 10px rgba(208, 226, 247, .5);
+	padding: 0px;
+	margin-left: 0em;
+
+	filter: progid:DXImageTransform.Microsoft.Shadow(color='#969696', Direction=135, Strength=5);/*for ie6,7,8*/
+}
+.boxDisShadow {
+	border: 1px solid ddd;
+	padding: 0px;
+	margin-left: 0em;
+}
+img {
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+}
+
+#histroyDlg {
+	width: 500px;
+	height: 450px;
+}
+#histroyLeft {
+	width: 33%;
+	height: 100%;
+	overflow-y: scroll;
+	overflow-x: hidden;
+	background-color: #fff;
+	float: left;
+}
+#histroyRight {
+	width: 67%;
+	height: 100%;
+	background-color: #fff;
+	float: right;
+	overflow: auto;
+}
+#im .about {
+	width: 100%;
+	height: 180px;
+	font-size: 15px;
+	margin-top: 0px;
+	background-color: white;
+}
+#im .aboutBtn {
+	width: 100%;
+	height: 45px;
+}
+#im .aboutLogo {
+	height: 120px;
+}
+#im .aboutLogoL {
+	height: 120px;
+	width: 130px;
+	float: left;
+}
+#im .aboutLogoL img {
+	margin-top: 10px;
+}
+#im .aboutLogoR {
+	height: 120px;
+	width: 180px;	/*不能全部填充，需要有两像素*/
+	float: left;
+}
+#im .aboutLogoR label {
+	font-size: 24px;
+}
+#im .aboutAddr {
+	height: 60px;
+}
+#aboutDlg {
+	width: 350px;
+}
+/* #im .dijitTooltipContainer {
+	background-color: #FDEAA6;
+} */
+#im .dijitTabCloseButton {
+	display: none;
+	margin-left: 0px;
+}
+/*#im .dijitTabHover .dijitTabCloseButton,
+#im .dijitTabCloseButtonHover,
+#im .dijitTabCloseButtonActive,
+#im .dijitTabChecked .dijitTabCloseButton {
+	display: inline-block;
+}
+#im #IMChat .dijitTabHover,
+#im #IMChat .dijitTabChecked {
+	padding-right:0px;
+}*/
+#im  .dijitTitlePaneContentOuter {
+	border: 0px solid #bfbfbf;
+}
+
+#im #loginTooltip {
+	background-color: white;
+}
+
+#im #IMWaitMsg {
+	font-family: '微软雅黑';
+}
+
+/*#im .dijitTab {
+	background:transparent repeat-x top left;
+}
+
+#im .dijitTabChecked {
+	background:url('dojo-release-1.8.3/dijit/themes/soria/images/tabContainerSprite.gif') repeat-x 0 -51px;
+}*/
+
+#im .dijitEditorIFrameContainer {
+	background-color: white;
+	height: 100%;
+}
+
+#dijitEditorBody {
+	overflow: hidden;
+	word-break: break-all;
+}
+
+#im .dijitDialog .dijitDialogPaneContent {
+	padding-top: 5px;
+       	padding-bottom: 15px;	
+}
+#im .del {
+    background-color: white;
+    padding-left: 20px;
+    height: 40px;
+}
+#im .delBtn {
+    height: 40px;
+}
+#im #_addInput_ {
+    float: left;
+    margin-left: 10px;
+    margin-top: 10px;
+    width: 300px;
+}
+#im #_addInputOK_ {
+    width: 70px;
+}
+#im #_addContent_ .dijitButton {
+    margin-top: 9px;
+}
+#im #_addShowAva_ {
+    float: left;
+    width: 100px;
+    height: 91px;
+    border: 1px soild #ff0000;
+}
+#im #_addShowAva_ img{
+    margin-top: 15px;
+}
+#im #_addShowAva_ {
+    background-color: white;
+}
+#im #_addShowLabel_ {
+    font-weight: bold;
+    font-size: 16px;
+    margin-top: 0px;
+    margin-left: 10px;
+}
+#im #_addMsgLabel_ {
+    font-weight: bold;
+    font-size: 16px;
+    margin-top: 0px;
+    margin-left: 10px;
+}
+#im #_msg_ {
+    width: 99%;
+    height: 100px;
+    overflow: hidden;
+    word-break: break-all;
+    border: 1px solid #707D8B;
+}
+#im .divInput {
+    height: 40px;
+}
+#im .divProfile {
+    height: 120px;
+    padding-top:5px;        
+}
+#im .divMsg {
+    height: 140px;
+    padding-top:10px; 
+}
+#im .divMsg #MsgEditor {
+    height: 120px;
+}
+#im .divMsg2 {
+    height: 50px;
+    padding-top:10px; 
+
+}
+#im .divMsg2 #MsgNetwork {
+    height: 30px;
+}
+#im .divMsg3 {
+    height: 95px;
+  padding-top:20px; 
+  padding-bottom:12px;
+	
+}
+#im .divMsg3 #MsgExplain {
+    height: 80px;
+}
+#im .divProfile2 {
+    
+    height: 100px;  
+	background-color: white;
+
+	
+}
+#im .divava2{
+    float: left;
+    width: 64px;
+    padding-left:35px; 
+    border: 1px soild #ff0000;
+    background-color: white;
+	padding-top:10px;
+
+}
+
+#im .divprofile3{
+float: right; 
+width: 340px;
+padding-top:10px;
+ padding-right:50px; 
+background-color: white;
+
+}
+#im .divProtect{
+background-color: white;
+width:310px;
+padding-left:195px;
+padding-right:7px;
+padding-top:10px;
+}
+#im .divtime{
+overflow:auto;
+overflow-x:hidden;
+width:100%;
+height:100%;
+
+
+}
+#im .divhistory{
+overflow:auto;
+width:100%;
+height:100%;
+}
+#im .otherdiv{
+clear:both;
+width:100%;
+}
+#im .otherdiv2{
+clear:both;
+width:100%;
+overflow:hidden;
+}
+
+.buddy_Panel {
+	background-color: white;
+	position: relative;
+	width: 240px;
+	overflow: hidden;
+	overflow-x: hidden;
+	overflow-y: hidden;
+}
+
+.buddy_Avatar {
+    background: none repeat scroll 0 0 white;
+    border: 0px solid #999999;
+    display: block;
+    height: 80px;
+	width: 80px;
+    overflow: hidden;
+    padding: 0px;
+	margin: 4px;
+    position: relative; 
+	float:right;
+}
+
+.buddy_Info {
+	height: 86px;
+}
+
+.buddy_Nick {
+    color: #030303;
+    overflow: hidden;
+	word-break: keep-all;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	-o-text-overflow: ellipsis;
+	text-align: left;
+ 	vertical-align: middle;
+}
+.buddy_Service {
+ 	
+}
+
+.buddy_Signature {
+	color: #808080;
+	float: left;
+	text-align: left;
+	word-break: break-all; 
+}
+.buddy_Divide{
+	height: 1px;
+	background: #ddf;
+	margin-top: 2px;
+	margin-bottom: 2px;
+	margin-right: 6px;
+}
+.buddy_state{
+	float:left;
+	color: #808080;
+	font-size: 10px;
+}
+
+.mySearchBar {
+    border: 1px solid #75A2B7;
+    display: block;
+    height: 20px;
+    margin: 0px;
+    overflow: hidden;
+	background-color: white;
+}
+
+.mySearchBox {
+    font-size: 12px;
+    height: 16px;
+    line-height: 16px;
+    margin: 0;
+    overflow: hidden;
+}
+
+.mySearchBar .dijitArrowButton{
+	border: 0;
+	padding: 0;
+	background: url("../img/skin/search.png") no-repeat scroll 0px 0px transparent;
+	width: 16px;
+	height: 16px;
+}
+
+.mySearchBar dijitArrowButtonContainer{
+	border: 0;
+}	
+
+.mySearchBar .dijitArrowButtonInner {
+	background: none;
+}
+
+.dj_ie6 .mySearchBar .dijitArrowButtonInner {
+	background: none;
+}
+
+.mySearchBar .dijitTextBox {
+	border: 0px;
+	background: none;
+}
+
+.mySearchBar .dijitComboBox .dijitArrowButtonContainer {
+	border-width: 0 0 0 0px !important;
+}
+
+.listItem {
+	height: 26px;
+	overflow: hidden;
+}
+
+.listAvatar {
+	width:24px;
+	height:24px;
+	margin-top:1px;
+	margin-bottom:1px;
+	margin-left:2px;
+	float:left;
+}
+
+.listText {
+	height:20px:;
+	line-height:20px;
+    overflow: hidden;
+	word-break: keep-all;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	-o-text-overflow: ellipsis;
+	margin-left: 38px;
+	margin-right: 10px;
+	margin-top: 2px;
+}
